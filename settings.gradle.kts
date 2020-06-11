@@ -10,4 +10,5 @@ pluginManagement {
 rootProject.name = "kotlin-three-js-starter"
 
 include("threejs_kt")
+include("statsjs_kt")
 

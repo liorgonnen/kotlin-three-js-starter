@@ -1,3 +1,5 @@
+import org.jetbrains.kotlin.gradle.targets.js.webpack.KotlinWebpackOutput.Target.ASSIGN
+
 plugins {
     id("org.jetbrains.kotlin.js")
 }
@@ -12,11 +14,12 @@ repositories {
 
 dependencies {
     implementation(kotlin("stdlib-js"))
+    implementation(npm("stats-js", "1.0.1"))
 }
 
 kotlin {
     js {
-        browser { }
+        browser()
         binaries.executable()
     }
 }
