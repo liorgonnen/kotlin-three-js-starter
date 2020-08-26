@@ -18,4 +18,14 @@ import org.w3c.performance.*
 import org.w3c.workers.*
 import org.w3c.xhr.*
 
-open external class WebGLShader(gl: WebGLRenderingContext, type: String, string: String)
+external var enabled: Boolean
+
+external var files: Any
+
+external fun add(key: String, file: Any)
+
+external fun get(key: String): Any
+
+external fun remove(key: String)
+
+external fun clear()

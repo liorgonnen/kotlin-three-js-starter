@@ -1,4 +1,5 @@
-@file:JsQualifier("THREE")
+@file:JsModule("three")
+@file:JsNonModule
 @file:Suppress("ABSTRACT_MEMBER_NOT_IMPLEMENTED", "VAR_TYPE_MISMATCH_ON_OVERRIDE", "INTERFACE_WITH_SUPERCLASS", "OVERRIDING_FINAL_MEMBER", "RETURN_TYPE_MISMATCH_ON_OVERRIDE", "CONFLICTING_OVERLOADS", "EXTERNAL_DELEGATION", "PackageDirectoryMismatch")
 package three.js
 
@@ -39,7 +40,8 @@ open external class Matrix3 : Matrix {
     open fun setFromMatrix4(m: Matrix4): Matrix3
     override fun multiplyScalar(s: Number): Matrix3
     override fun determinant(): Number
-    open fun getInverse(matrix: Matrix3, throwOnDegenerate: Boolean = definedExternally): Matrix3
+    open fun getInverse(matrix: Matrix3): Matrix3
+    override fun getInverse(matrix: Matrix): Matrix
     override fun transpose(): Matrix3
     open fun getNormalMatrix(matrix4: Matrix4): Matrix3
     open fun transposeIntoArray(r: Array<Number>): Matrix3
@@ -59,5 +61,4 @@ open external class Matrix3 : Matrix {
     open fun multiplyVector3Array(a: Any): Any
     open fun getInverse(matrix: Matrix4, throwOnDegenerate: Boolean = definedExternally): Matrix3
     open fun flattenToArrayOffset(array: Array<Number>, offset: Number): Array<Number>
-    open fun toArray(): Array<Number>
 }

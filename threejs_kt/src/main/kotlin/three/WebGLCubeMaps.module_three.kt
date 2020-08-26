@@ -18,4 +18,7 @@ import org.w3c.performance.*
 import org.w3c.workers.*
 import org.w3c.xhr.*
 
-open external class WebGLShader(gl: WebGLRenderingContext, type: String, string: String)
+open external class WebGLCubeMaps(renderer: WebGLRenderer) {
+    open fun get(texture: Any): Any
+    open fun dispose()
+}

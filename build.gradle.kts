@@ -1,3 +1,5 @@
+import org.jetbrains.kotlin.gradle.dsl.KotlinJsCompile
+
 plugins {
     id("org.jetbrains.kotlin.js") version "1.4.0"
 }
@@ -6,7 +8,6 @@ group = "com.liorgonnen"
 version = "1.0-SNAPSHOT"
 
 repositories {
-    maven("https://dl.bintray.com/kotlin/kotlin-eap")
     mavenCentral()
 }
 
@@ -20,4 +21,8 @@ kotlin {
         browser()
         binaries.executable()
     }
+}
+
+tasks.withType(KotlinJsCompile::class.java).named("compileKotlinJs") {
+    kotlinOptions.moduleKind = "commonjs"
 }

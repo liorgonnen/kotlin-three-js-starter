@@ -1,4 +1,5 @@
-@file:JsQualifier("THREE")
+@file:JsModule("three")
+@file:JsNonModule
 @file:Suppress("ABSTRACT_MEMBER_NOT_IMPLEMENTED", "VAR_TYPE_MISMATCH_ON_OVERRIDE", "INTERFACE_WITH_SUPERCLASS", "OVERRIDING_FINAL_MEMBER", "RETURN_TYPE_MISMATCH_ON_OVERRIDE", "CONFLICTING_OVERLOADS", "EXTERNAL_DELEGATION", "PackageDirectoryMismatch")
 package three.js
 
@@ -17,7 +18,7 @@ import org.w3c.performance.*
 import org.w3c.workers.*
 import org.w3c.xhr.*
 
-external interface `T$33` {
+external interface `T$35` {
     var innerRadius: Number
     var outerRadius: Number
     var thetaSegments: Number
@@ -27,5 +28,6 @@ external interface `T$33` {
 }
 
 open external class RingGeometry(innerRadius: Number = definedExternally, outerRadius: Number = definedExternally, thetaSegments: Number = definedExternally, phiSegments: Number = definedExternally, thetaStart: Number = definedExternally, thetaLength: Number = definedExternally) : Geometry {
-    open var parameters: `T$33`
+    override var type: String
+    open var parameters: `T$35`
 }

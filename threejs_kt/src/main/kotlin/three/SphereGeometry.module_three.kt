@@ -1,4 +1,5 @@
-@file:JsQualifier("THREE")
+@file:JsModule("three")
+@file:JsNonModule
 @file:Suppress("ABSTRACT_MEMBER_NOT_IMPLEMENTED", "VAR_TYPE_MISMATCH_ON_OVERRIDE", "INTERFACE_WITH_SUPERCLASS", "OVERRIDING_FINAL_MEMBER", "RETURN_TYPE_MISMATCH_ON_OVERRIDE", "CONFLICTING_OVERLOADS", "EXTERNAL_DELEGATION", "PackageDirectoryMismatch")
 package three.js
 
@@ -17,7 +18,7 @@ import org.w3c.performance.*
 import org.w3c.workers.*
 import org.w3c.xhr.*
 
-external interface `T$32` {
+external interface `T$34` {
     var radius: Number
     var widthSegments: Number
     var heightSegments: Number
@@ -28,5 +29,6 @@ external interface `T$32` {
 }
 
 open external class SphereGeometry(radius: Number = definedExternally, widthSegments: Number = definedExternally, heightSegments: Number = definedExternally, phiStart: Number = definedExternally, phiLength: Number = definedExternally, thetaStart: Number = definedExternally, thetaLength: Number = definedExternally) : Geometry {
-    open var parameters: `T$32`
+    override var type: String
+    open var parameters: `T$34`
 }

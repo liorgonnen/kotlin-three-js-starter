@@ -1,4 +1,5 @@
-@file:JsQualifier("THREE")
+@file:JsModule("three")
+@file:JsNonModule
 @file:Suppress("ABSTRACT_MEMBER_NOT_IMPLEMENTED", "VAR_TYPE_MISMATCH_ON_OVERRIDE", "INTERFACE_WITH_SUPERCLASS", "OVERRIDING_FINAL_MEMBER", "RETURN_TYPE_MISMATCH_ON_OVERRIDE", "CONFLICTING_OVERLOADS", "EXTERNAL_DELEGATION", "PackageDirectoryMismatch")
 package three.js
 
@@ -24,13 +25,9 @@ external interface `T$20` {
     operator fun set(key: String, value: Number)
 }
 
-open external class Mesh : Object3D {
-    constructor(geometry: Geometry, material: Material)
-    constructor(geometry: Geometry, material: Array<Material>)
-    constructor(geometry: BufferGeometry, material: Material)
-    constructor(geometry: BufferGeometry, material: Array<Material>)
-    open var geometry: dynamic /* Geometry | BufferGeometry */
-    open var material: dynamic /* Material | Array<Material> */
+open external class Mesh<TGeometry, TMaterial>(geometry: TGeometry = definedExternally, material: TMaterial = definedExternally) : Object3D {
+    open var geometry: TGeometry
+    open var material: TMaterial
     open var morphTargetInfluences: Array<Number>
     open var morphTargetDictionary: `T$20`
     open var isMesh: Boolean

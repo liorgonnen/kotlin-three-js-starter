@@ -1,4 +1,5 @@
-@file:JsQualifier("THREE")
+@file:JsModule("three")
+@file:JsNonModule
 @file:Suppress("ABSTRACT_MEMBER_NOT_IMPLEMENTED", "VAR_TYPE_MISMATCH_ON_OVERRIDE", "INTERFACE_WITH_SUPERCLASS", "OVERRIDING_FINAL_MEMBER", "RETURN_TYPE_MISMATCH_ON_OVERRIDE", "CONFLICTING_OVERLOADS", "EXTERNAL_DELEGATION", "PackageDirectoryMismatch")
 package three.js
 
@@ -56,8 +57,9 @@ external interface UVGenerator {
 }
 
 open external class ExtrudeBufferGeometry : BufferGeometry {
-    constructor(shapes: Shape, options: ExtrudeGeometryOptions)
-    constructor(shapes: Array<Shape>, options: ExtrudeGeometryOptions)
+    constructor(shapes: Shape, options: ExtrudeGeometryOptions = definedExternally)
+    constructor(shapes: Array<Shape>, options: ExtrudeGeometryOptions = definedExternally)
+    override var type: String
     open fun addShapeList(shapes: Array<Shape>, options: Any = definedExternally)
     open fun addShape(shape: Shape, options: Any = definedExternally)
 
@@ -67,8 +69,9 @@ open external class ExtrudeBufferGeometry : BufferGeometry {
 }
 
 open external class ExtrudeGeometry : Geometry {
-    constructor(shapes: Shape, options: ExtrudeGeometryOptions)
-    constructor(shapes: Array<Shape>, options: ExtrudeGeometryOptions)
+    constructor(shapes: Shape, options: ExtrudeGeometryOptions = definedExternally)
+    constructor(shapes: Array<Shape>, options: ExtrudeGeometryOptions = definedExternally)
+    override var type: String
     open fun addShapeList(shapes: Array<Shape>, options: Any = definedExternally)
     open fun addShape(shape: Shape, options: Any = definedExternally)
 

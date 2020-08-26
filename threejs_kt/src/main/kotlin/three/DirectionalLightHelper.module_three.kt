@@ -1,4 +1,5 @@
-@file:JsQualifier("THREE")
+@file:JsModule("three")
+@file:JsNonModule
 @file:Suppress("ABSTRACT_MEMBER_NOT_IMPLEMENTED", "VAR_TYPE_MISMATCH_ON_OVERRIDE", "INTERFACE_WITH_SUPERCLASS", "OVERRIDING_FINAL_MEMBER", "RETURN_TYPE_MISMATCH_ON_OVERRIDE", "CONFLICTING_OVERLOADS", "EXTERNAL_DELEGATION", "PackageDirectoryMismatch")
 package three.js
 
@@ -18,12 +19,12 @@ import org.w3c.workers.*
 import org.w3c.xhr.*
 
 open external class DirectionalLightHelper : Object3D {
-    constructor(light: DirectionalLight, size: Number, color: Color)
-    constructor(light: DirectionalLight, size: Number, color: String)
-    constructor(light: DirectionalLight, size: Number, color: Number)
+    constructor(light: DirectionalLight, size: Number = definedExternally, color: Color = definedExternally)
+    constructor(light: DirectionalLight, size: Number = definedExternally, color: String = definedExternally)
+    constructor(light: DirectionalLight, size: Number = definedExternally, color: Number = definedExternally)
     open var light: DirectionalLight
-    open var lightPlane: Line
-    open var targetLine: Line
+    open var lightPlane: Line<dynamic, dynamic>
+    open var targetLine: Line<dynamic, dynamic>
     open var color: dynamic /* Color? | String? | Number? */
     override var matrix: Matrix4
     override var matrixAutoUpdate: Boolean

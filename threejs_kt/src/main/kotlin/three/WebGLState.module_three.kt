@@ -1,4 +1,5 @@
-@file:JsQualifier("THREE")
+@file:JsModule("three")
+@file:JsNonModule
 @file:Suppress("ABSTRACT_MEMBER_NOT_IMPLEMENTED", "VAR_TYPE_MISMATCH_ON_OVERRIDE", "INTERFACE_WITH_SUPERCLASS", "OVERRIDING_FINAL_MEMBER", "RETURN_TYPE_MISMATCH_ON_OVERRIDE", "CONFLICTING_OVERLOADS", "EXTERNAL_DELEGATION", "PackageDirectoryMismatch")
 package three.js
 
@@ -43,14 +44,14 @@ open external class WebGLStencilBuffer {
     open fun reset()
 }
 
-external interface `T$9` {
+external interface `T$15` {
     var color: WebGLColorBuffer
     var depth: WebGLDepthBuffer
     var stencil: WebGLStencilBuffer
 }
 
 open external class WebGLState(gl: WebGLRenderingContext, extensions: WebGLExtensions, capabilities: WebGLCapabilities) {
-    open var buffers: `T$9`
+    open var buffers: `T$15`
     open fun initAttributes()
     open fun enableAttribute(attribute: Number)
     open fun enableAttributeAndDivisor(attribute: Number, meshPerAttribute: Number)
@@ -64,7 +65,7 @@ open external class WebGLState(gl: WebGLRenderingContext, extensions: WebGLExten
     open fun setFlipSided(flipSided: Boolean)
     open fun setCullFace(cullFace: CullFace)
     open fun setLineWidth(width: Number)
-    open fun setPolygonOffset(polygonoffset: Boolean, factor: Number, units: Number)
+    open fun setPolygonOffset(polygonoffset: Boolean, factor: Number = definedExternally, units: Number = definedExternally)
     open fun setScissorTest(scissorTest: Boolean)
     open fun activeTexture(webglSlot: Number)
     open fun bindTexture(webglType: Number, webglTexture: Any)

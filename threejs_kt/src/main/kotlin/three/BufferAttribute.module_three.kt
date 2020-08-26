@@ -1,4 +1,5 @@
-@file:JsQualifier("THREE")
+@file:JsModule("three")
+@file:JsNonModule
 @file:Suppress("ABSTRACT_MEMBER_NOT_IMPLEMENTED", "VAR_TYPE_MISMATCH_ON_OVERRIDE", "INTERFACE_WITH_SUPERCLASS", "OVERRIDING_FINAL_MEMBER", "RETURN_TYPE_MISMATCH_ON_OVERRIDE", "CONFLICTING_OVERLOADS", "EXTERNAL_DELEGATION", "PackageDirectoryMismatch")
 package three.js
 
@@ -17,36 +18,36 @@ import org.w3c.performance.*
 import org.w3c.workers.*
 import org.w3c.xhr.*
 
-external interface `T$10` {
+external interface `T$1` {
     var offset: Number
     var count: Number
 }
 
-external interface `T$11` {
+external interface `T$2` {
     var r: Number
     var g: Number
     var b: Number
 }
 
-external interface `T$12` {
+external interface `T$3` {
     var x: Number
     var y: Number
 }
 
-external interface `T$13` {
+external interface `T$4` {
     var x: Number
     var y: Number
     var z: Number
 }
 
-external interface `T$14` {
+external interface `T$5` {
     var x: Number
     var y: Number
     var z: Number
     var w: Number
 }
 
-external interface `T$15` {
+external interface `T$6` {
     var itemSize: Number
     var type: String
     var array: Array<Number>
@@ -58,7 +59,7 @@ open external class BufferAttribute(array: ArrayLike<Number>, itemSize: Number, 
     open var array: ArrayLike<Number>
     open var itemSize: Number
     open var usage: Usage
-    open var updateRange: `T$10`
+    open var updateRange: `T$1`
     open var version: Number
     open var normalized: Boolean
     open var count: Number
@@ -70,10 +71,10 @@ open external class BufferAttribute(array: ArrayLike<Number>, itemSize: Number, 
     open fun copy(source: BufferAttribute): BufferAttribute /* this */
     open fun copyAt(index1: Number, attribute: BufferAttribute, index2: Number): BufferAttribute /* this */
     open fun copyArray(array: ArrayLike<Number>): BufferAttribute /* this */
-    open fun copyColorsArray(colors: Array<`T$11`>): BufferAttribute /* this */
-    open fun copyVector2sArray(vectors: Array<`T$12`>): BufferAttribute /* this */
-    open fun copyVector3sArray(vectors: Array<`T$13`>): BufferAttribute /* this */
-    open fun copyVector4sArray(vectors: Array<`T$14`>): BufferAttribute /* this */
+    open fun copyColorsArray(colors: Array<`T$2`>): BufferAttribute /* this */
+    open fun copyVector2sArray(vectors: Array<`T$3`>): BufferAttribute /* this */
+    open fun copyVector3sArray(vectors: Array<`T$4`>): BufferAttribute /* this */
+    open fun copyVector4sArray(vectors: Array<`T$5`>): BufferAttribute /* this */
     open fun applyMatrix3(m: Matrix3): BufferAttribute /* this */
     open fun applyMatrix4(m: Matrix4): BufferAttribute /* this */
     open fun applyNormalMatrix(m: Matrix3): BufferAttribute /* this */
@@ -91,5 +92,5 @@ open external class BufferAttribute(array: ArrayLike<Number>, itemSize: Number, 
     open fun setXY(index: Number, x: Number, y: Number): BufferAttribute /* this */
     open fun setXYZ(index: Number, x: Number, y: Number, z: Number): BufferAttribute /* this */
     open fun setXYZW(index: Number, x: Number, y: Number, z: Number, w: Number): BufferAttribute /* this */
-    open fun toJSON(): `T$15`
+    open fun toJSON(): `T$6`
 }

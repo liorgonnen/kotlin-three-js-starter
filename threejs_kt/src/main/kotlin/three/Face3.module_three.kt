@@ -1,4 +1,5 @@
-@file:JsQualifier("THREE")
+@file:JsModule("three")
+@file:JsNonModule
 @file:Suppress("ABSTRACT_MEMBER_NOT_IMPLEMENTED", "VAR_TYPE_MISMATCH_ON_OVERRIDE", "INTERFACE_WITH_SUPERCLASS", "OVERRIDING_FINAL_MEMBER", "RETURN_TYPE_MISMATCH_ON_OVERRIDE", "CONFLICTING_OVERLOADS", "EXTERNAL_DELEGATION", "PackageDirectoryMismatch")
 package three.js
 
@@ -17,10 +18,11 @@ import org.w3c.performance.*
 import org.w3c.workers.*
 import org.w3c.xhr.*
 
-open external class Face3(a: Number, b: Number, c: Number, normal: Vector3 = definedExternally, color: Color = definedExternally, materialIndex: Number = definedExternally) {
-    constructor(a: Number, b: Number, c: Number, normal: Vector3, vertexColors: Array<Color>, materialIndex: Number)
-    constructor(a: Number, b: Number, c: Number, vertexNormals: Array<Vector3>, color: Color, materialIndex: Number)
-    constructor(a: Number, b: Number, c: Number, vertexNormals: Array<Vector3>, vertexColors: Array<Color>, materialIndex: Number)
+open external class Face3 {
+    constructor(a: Number, b: Number, c: Number, normal: Vector3 = definedExternally, color: Color = definedExternally, materialIndex: Number = definedExternally)
+    constructor(a: Number, b: Number, c: Number, normal: Vector3 = definedExternally, vertexColors: Array<Color> = definedExternally, materialIndex: Number = definedExternally)
+    constructor(a: Number, b: Number, c: Number, vertexNormals: Array<Vector3> = definedExternally, color: Color = definedExternally, materialIndex: Number = definedExternally)
+    constructor(a: Number, b: Number, c: Number, vertexNormals: Array<Vector3> = definedExternally, vertexColors: Array<Color> = definedExternally, materialIndex: Number = definedExternally)
     open var a: Number
     open var b: Number
     open var c: Number

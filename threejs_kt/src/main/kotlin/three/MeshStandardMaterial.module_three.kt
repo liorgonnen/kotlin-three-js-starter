@@ -1,4 +1,5 @@
-@file:JsQualifier("THREE")
+@file:JsModule("three")
+@file:JsNonModule
 @file:Suppress("ABSTRACT_MEMBER_NOT_IMPLEMENTED", "VAR_TYPE_MISMATCH_ON_OVERRIDE", "INTERFACE_WITH_SUPERCLASS", "OVERRIDING_FINAL_MEMBER", "RETURN_TYPE_MISMATCH_ON_OVERRIDE", "CONFLICTING_OVERLOADS", "EXTERNAL_DELEGATION", "PackageDirectoryMismatch")
 package three.js
 
@@ -114,6 +115,8 @@ external interface MeshStandardMaterialParameters : MaterialParameters {
 }
 
 open external class MeshStandardMaterial(parameters: MeshStandardMaterialParameters = definedExternally) : Material {
+    override var type: String
+    override var defines: Json
     open var color: Color
     open var roughness: Number
     open var metalness: Number
@@ -141,6 +144,8 @@ open external class MeshStandardMaterial(parameters: MeshStandardMaterialParamet
     open var refractionRatio: Number
     open var wireframe: Boolean
     open var wireframeLinewidth: Number
+    open var wireframeLinecap: String
+    open var wireframeLinejoin: String
     open var skinning: Boolean
     open var vertexTangents: Boolean
     open var morphTargets: Boolean

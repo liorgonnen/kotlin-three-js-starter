@@ -1,4 +1,5 @@
-@file:JsQualifier("THREE")
+@file:JsModule("three")
+@file:JsNonModule
 @file:Suppress("ABSTRACT_MEMBER_NOT_IMPLEMENTED", "VAR_TYPE_MISMATCH_ON_OVERRIDE", "INTERFACE_WITH_SUPERCLASS", "OVERRIDING_FINAL_MEMBER", "RETURN_TYPE_MISMATCH_ON_OVERRIDE", "CONFLICTING_OVERLOADS", "EXTERNAL_DELEGATION", "PackageDirectoryMismatch")
 package three.js
 
@@ -34,7 +35,7 @@ open external class Audio<NodeType : AudioNode>(listener: AudioListener) : Objec
     open var isPlaying: Boolean
     open var hasPlaybackControl: Boolean
     open var sourceType: String
-    open var source: AudioBufferSourceNode
+    open var source: AudioBufferSourceNode?
     open var filters: Array<Any>
     open fun getOutput(): NodeType
     open fun setNodeSource(audioNode: AudioBufferSourceNode): Audio<NodeType> /* this */

@@ -1,4 +1,5 @@
-@file:JsQualifier("THREE")
+@file:JsModule("three")
+@file:JsNonModule
 @file:Suppress("ABSTRACT_MEMBER_NOT_IMPLEMENTED", "VAR_TYPE_MISMATCH_ON_OVERRIDE", "INTERFACE_WITH_SUPERCLASS", "OVERRIDING_FINAL_MEMBER", "RETURN_TYPE_MISMATCH_ON_OVERRIDE", "CONFLICTING_OVERLOADS", "EXTERNAL_DELEGATION", "PackageDirectoryMismatch")
 package three.js
 
@@ -71,7 +72,7 @@ open external class Raycaster(origin: Vector3 = definedExternally, direction: Ve
     open var layers: Layers
     open var params: RaycasterParameters
     open fun set(origin: Vector3, direction: Vector3)
-    open fun setFromCamera(coords: `T$12`, camera: Camera)
+    open fun setFromCamera(coords: `T$3`, camera: Camera)
     open fun intersectObject(obj: Object3D, recursive: Boolean = definedExternally, optionalTarget: Array<Intersection> = definedExternally): Array<Intersection>
     open fun intersectObjects(objects: Array<Object3D>, recursive: Boolean = definedExternally, optionalTarget: Array<Intersection> = definedExternally): Array<Intersection>
 }

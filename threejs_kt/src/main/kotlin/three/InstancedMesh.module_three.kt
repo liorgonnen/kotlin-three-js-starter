@@ -1,4 +1,5 @@
-@file:JsQualifier("THREE")
+@file:JsModule("three")
+@file:JsNonModule
 @file:Suppress("ABSTRACT_MEMBER_NOT_IMPLEMENTED", "VAR_TYPE_MISMATCH_ON_OVERRIDE", "INTERFACE_WITH_SUPERCLASS", "OVERRIDING_FINAL_MEMBER", "RETURN_TYPE_MISMATCH_ON_OVERRIDE", "CONFLICTING_OVERLOADS", "EXTERNAL_DELEGATION", "PackageDirectoryMismatch")
 package three.js
 
@@ -17,11 +18,7 @@ import org.w3c.performance.*
 import org.w3c.workers.*
 import org.w3c.xhr.*
 
-open external class InstancedMesh : Mesh {
-    constructor(geometry: Geometry, material: Material, count: Number)
-    constructor(geometry: Geometry, material: Array<Material>, count: Number)
-    constructor(geometry: BufferGeometry, material: Material, count: Number)
-    constructor(geometry: BufferGeometry, material: Array<Material>, count: Number)
+open external class InstancedMesh<TGeometry, TMaterial>(geometry: TGeometry, material: TMaterial, count: Number) : Mesh<TGeometry, TMaterial> {
     open var count: Number
     open var instanceMatrix: BufferAttribute
     open var isInstancedMesh: Boolean

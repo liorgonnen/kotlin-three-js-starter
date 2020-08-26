@@ -1,4 +1,5 @@
-@file:JsQualifier("THREE")
+@file:JsModule("three")
+@file:JsNonModule
 @file:Suppress("ABSTRACT_MEMBER_NOT_IMPLEMENTED", "VAR_TYPE_MISMATCH_ON_OVERRIDE", "INTERFACE_WITH_SUPERCLASS", "OVERRIDING_FINAL_MEMBER", "RETURN_TYPE_MISMATCH_ON_OVERRIDE", "CONFLICTING_OVERLOADS", "EXTERNAL_DELEGATION", "PackageDirectoryMismatch")
 package three.js
 
@@ -84,7 +85,7 @@ external interface MaterialParameters {
     var polygonOffsetUnits: Number?
         get() = definedExternally
         set(value) = definedExternally
-    var precision: dynamic /* String? | String? | String? */
+    var precision: String? /* 'highp' | 'mediump' | 'lowp' */
         get() = definedExternally
         set(value) = definedExternally
     var premultipliedAlpha: Boolean?
@@ -150,7 +151,7 @@ open external class Material : EventDispatcher {
     open var clippingPlanes: Any
     open var clipShadows: Boolean
     open var colorWrite: Boolean
-    open var defines: Any
+    open var defines: Json
     open var depthFunc: DepthModes
     open var depthTest: Boolean
     open var depthWrite: Boolean
@@ -170,7 +171,7 @@ open external class Material : EventDispatcher {
     open var polygonOffset: Boolean
     open var polygonOffsetFactor: Number
     open var polygonOffsetUnits: Number
-    open var precision: dynamic /* String? | String? | String? */
+    open var precision: String /* 'highp' | 'mediump' | 'lowp' */
     open var premultipliedAlpha: Boolean
     open var dithering: Boolean
     open var flatShading: Boolean
@@ -188,6 +189,7 @@ open external class Material : EventDispatcher {
     open fun copy(material: Material): Material /* this */
     open fun dispose()
     open fun onBeforeCompile(shader: Shader, renderer: WebGLRenderer)
+    open fun customProgramCacheKey(): String
     open fun setValues(values: MaterialParameters)
     open fun toJSON(meta: Any = definedExternally): Any
 }

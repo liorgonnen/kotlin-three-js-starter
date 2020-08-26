@@ -1,4 +1,5 @@
-@file:JsQualifier("THREE")
+@file:JsModule("three")
+@file:JsNonModule
 @file:Suppress("ABSTRACT_MEMBER_NOT_IMPLEMENTED", "VAR_TYPE_MISMATCH_ON_OVERRIDE", "INTERFACE_WITH_SUPERCLASS", "OVERRIDING_FINAL_MEMBER", "RETURN_TYPE_MISMATCH_ON_OVERRIDE", "CONFLICTING_OVERLOADS", "EXTERNAL_DELEGATION", "PackageDirectoryMismatch")
 package three.js
 
@@ -18,8 +19,8 @@ import org.w3c.workers.*
 import org.w3c.xhr.*
 
 open external class Box2(min: Vector2 = definedExternally, max: Vector2 = definedExternally) {
-    open var max: Vector2
     open var min: Vector2
+    open var max: Vector2
     open fun set(min: Vector2, max: Vector2): Box2
     open fun setFromPoints(points: Array<Vector2>): Box2
     open fun setFromCenterAndSize(center: Vector2, size: Vector2): Box2
@@ -34,7 +35,7 @@ open external class Box2(min: Vector2 = definedExternally, max: Vector2 = define
     open fun expandByScalar(scalar: Number): Box2
     open fun containsPoint(point: Vector2): Boolean
     open fun containsBox(box: Box2): Boolean
-    open fun getParameter(point: Vector2): Vector2
+    open fun getParameter(point: Vector2, target: Vector2): Vector2
     open fun intersectsBox(box: Box2): Boolean
     open fun clampPoint(point: Vector2, target: Vector2): Vector2
     open fun distanceToPoint(point: Vector2): Number

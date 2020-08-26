@@ -1,4 +1,5 @@
-@file:JsQualifier("THREE")
+@file:JsModule("three")
+@file:JsNonModule
 @file:Suppress("ABSTRACT_MEMBER_NOT_IMPLEMENTED", "VAR_TYPE_MISMATCH_ON_OVERRIDE", "INTERFACE_WITH_SUPERCLASS", "OVERRIDING_FINAL_MEMBER", "RETURN_TYPE_MISMATCH_ON_OVERRIDE", "CONFLICTING_OVERLOADS", "EXTERNAL_DELEGATION", "PackageDirectoryMismatch")
 package three.js
 
@@ -17,7 +18,7 @@ import org.w3c.performance.*
 import org.w3c.workers.*
 import org.w3c.xhr.*
 
-external interface `T$45` {
+external interface `T$48` {
     var enabled: Boolean
     var fullWidth: Number
     var fullHeight: Number
@@ -36,7 +37,7 @@ open external class PerspectiveCamera(fov: Number = definedExternally, aspect: N
     open var near: Number
     open var far: Number
     open var focus: Number
-    open var view: `T$45`
+    open var view: `T$48`?
     open var filmGauge: Number
     open var filmOffset: Number
     open fun setFocalLength(focalLength: Number)
@@ -48,6 +49,6 @@ open external class PerspectiveCamera(fov: Number = definedExternally, aspect: N
     open fun clearViewOffset()
     open fun updateProjectionMatrix()
     open fun toJSON(meta: Any = definedExternally): Any
-    override fun toJSON(meta: `T$5`): Any
+    override fun toJSON(meta: `T$0`): Any
     open fun setLens(focalLength: Number, frameHeight: Number = definedExternally)
 }

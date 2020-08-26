@@ -1,4 +1,5 @@
-@file:JsQualifier("THREE")
+@file:JsModule("three")
+@file:JsNonModule
 @file:Suppress("ABSTRACT_MEMBER_NOT_IMPLEMENTED", "VAR_TYPE_MISMATCH_ON_OVERRIDE", "INTERFACE_WITH_SUPERCLASS", "OVERRIDING_FINAL_MEMBER", "RETURN_TYPE_MISMATCH_ON_OVERRIDE", "CONFLICTING_OVERLOADS", "EXTERNAL_DELEGATION", "PackageDirectoryMismatch")
 package three.js
 
@@ -17,7 +18,7 @@ import org.w3c.performance.*
 import org.w3c.workers.*
 import org.w3c.xhr.*
 
-external interface `T$5` {
+external interface `T$0` {
     var geometries: Any
     var materials: Any
     var textures: Any
@@ -90,7 +91,7 @@ open external class Object3D : EventDispatcher {
     open fun updateMatrix()
     open fun updateMatrixWorld(force: Boolean = definedExternally)
     open fun updateWorldMatrix(updateParents: Boolean, updateChildren: Boolean)
-    open fun toJSON(meta: `T$5` = definedExternally): Any
+    open fun toJSON(meta: `T$0` = definedExternally): Any
     open fun clone(recursive: Boolean = definedExternally): Object3D /* this */
     open fun copy(source: Object3D /* this */, recursive: Boolean = definedExternally): Object3D /* this */
 

@@ -18,4 +18,6 @@ import org.w3c.performance.*
 import org.w3c.workers.*
 import org.w3c.xhr.*
 
-open external class WebGLShader(gl: WebGLRenderingContext, type: String, string: String)
+open external class WebGL1Renderer(parameters: WebGLRendererParameters = definedExternally) : WebGLRenderer {
+    open var isWebGL1Renderer: Boolean
+}

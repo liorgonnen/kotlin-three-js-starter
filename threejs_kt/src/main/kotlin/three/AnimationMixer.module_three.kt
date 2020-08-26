@@ -1,4 +1,5 @@
-@file:JsQualifier("THREE")
+@file:JsModule("three")
+@file:JsNonModule
 @file:Suppress("ABSTRACT_MEMBER_NOT_IMPLEMENTED", "VAR_TYPE_MISMATCH_ON_OVERRIDE", "INTERFACE_WITH_SUPERCLASS", "OVERRIDING_FINAL_MEMBER", "RETURN_TYPE_MISMATCH_ON_OVERRIDE", "CONFLICTING_OVERLOADS", "EXTERNAL_DELEGATION", "PackageDirectoryMismatch")
 package three.js
 
@@ -35,7 +36,4 @@ open external class AnimationMixer : EventDispatcher {
     open fun uncacheRoot(root: AnimationObjectGroup)
     open fun uncacheAction(clip: AnimationClip, root: Object3D = definedExternally)
     open fun uncacheAction(clip: AnimationClip, root: AnimationObjectGroup = definedExternally)
-    open fun clipAction(clip: AnimationClip): AnimationAction
-    open fun existingAction(clip: AnimationClip): AnimationAction?
-    open fun uncacheAction(clip: AnimationClip)
 }

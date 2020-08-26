@@ -1,4 +1,5 @@
-@file:JsQualifier("THREE")
+@file:JsModule("three")
+@file:JsNonModule
 @file:Suppress("ABSTRACT_MEMBER_NOT_IMPLEMENTED", "VAR_TYPE_MISMATCH_ON_OVERRIDE", "INTERFACE_WITH_SUPERCLASS", "OVERRIDING_FINAL_MEMBER", "RETURN_TYPE_MISMATCH_ON_OVERRIDE", "CONFLICTING_OVERLOADS", "EXTERNAL_DELEGATION", "PackageDirectoryMismatch")
 package three.js
 
@@ -17,7 +18,7 @@ import org.w3c.performance.*
 import org.w3c.workers.*
 import org.w3c.xhr.*
 
-external interface `T$50` {
+external interface `T$53` {
     var buffer: WebGLBuffer
     var type: GLenum
     var bytesPerElement: Number
@@ -25,8 +26,8 @@ external interface `T$50` {
 }
 
 open external class WebGLAttributes(gl: WebGLRenderingContext, capabilities: WebGLCapabilities) {
-    open fun get(attribute: BufferAttribute): `T$50`
-    open fun get(attribute: InterleavedBufferAttribute): `T$50`
+    open fun get(attribute: BufferAttribute): `T$53`
+    open fun get(attribute: InterleavedBufferAttribute): `T$53`
     open fun remove(attribute: BufferAttribute)
     open fun remove(attribute: InterleavedBufferAttribute)
     open fun update(attribute: BufferAttribute, bufferType: GLenum)

@@ -1,4 +1,5 @@
-@file:JsQualifier("THREE")
+@file:JsModule("three")
+@file:JsNonModule
 @file:Suppress("ABSTRACT_MEMBER_NOT_IMPLEMENTED", "VAR_TYPE_MISMATCH_ON_OVERRIDE", "INTERFACE_WITH_SUPERCLASS", "OVERRIDING_FINAL_MEMBER", "RETURN_TYPE_MISMATCH_ON_OVERRIDE", "CONFLICTING_OVERLOADS", "EXTERNAL_DELEGATION", "PackageDirectoryMismatch")
 package three.js
 
@@ -23,7 +24,7 @@ external interface Vector {
     fun set(vararg args: Number): Vector /* this */
     fun setScalar(scalar: Number): Vector /* this */
     fun copy(v: Vector): Vector /* this */
-    fun add(v: Vector, w: Vector = definedExternally): Vector /* this */
+    fun add(v: Vector): Vector /* this */
     fun addVectors(a: Vector, b: Vector): Vector /* this */
     fun addScaledVector(vector: Vector, scale: Number): Vector /* this */
     fun addScalar(scalar: Number): Vector /* this */
@@ -62,7 +63,6 @@ open external class Vector2(x: Number = definedExternally, y: Number = definedEx
     open fun copy(v: Vector2): Vector2 /* this */
     override fun copy(v: Vector): Vector /* this */
     open fun add(v: Vector2, w: Vector2 = definedExternally): Vector2 /* this */
-    override fun add(v: Vector, w: Vector): Vector /* this */
     override fun addScalar(s: Number): Vector2 /* this */
     open fun addVectors(a: Vector2, b: Vector2): Vector2 /* this */
     override fun addVectors(a: Vector, b: Vector): Vector /* this */

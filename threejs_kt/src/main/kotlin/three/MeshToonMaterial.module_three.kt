@@ -1,4 +1,5 @@
-@file:JsQualifier("THREE")
+@file:JsModule("three")
+@file:JsNonModule
 @file:Suppress("ABSTRACT_MEMBER_NOT_IMPLEMENTED", "VAR_TYPE_MISMATCH_ON_OVERRIDE", "INTERFACE_WITH_SUPERCLASS", "OVERRIDING_FINAL_MEMBER", "RETURN_TYPE_MISMATCH_ON_OVERRIDE", "CONFLICTING_OVERLOADS", "EXTERNAL_DELEGATION", "PackageDirectoryMismatch")
 package three.js
 
@@ -19,12 +20,6 @@ import org.w3c.xhr.*
 
 external interface MeshToonMaterialParameters : MaterialParameters {
     var color: dynamic /* Color? | String? | Number? */
-        get() = definedExternally
-        set(value) = definedExternally
-    var specular: dynamic /* Color? | String? | Number? */
-        get() = definedExternally
-        set(value) = definedExternally
-    var shininess: Number?
         get() = definedExternally
         set(value) = definedExternally
     override var opacity: Number?
@@ -81,9 +76,6 @@ external interface MeshToonMaterialParameters : MaterialParameters {
     var displacementBias: Number?
         get() = definedExternally
         set(value) = definedExternally
-    var specularMap: Texture?
-        get() = definedExternally
-        set(value) = definedExternally
     var alphaMap: Texture?
         get() = definedExternally
         set(value) = definedExternally
@@ -111,9 +103,9 @@ external interface MeshToonMaterialParameters : MaterialParameters {
 }
 
 open external class MeshToonMaterial(parameters: MeshToonMaterialParameters = definedExternally) : Material {
+    override var type: String
+    override var defines: Json
     open var color: Color
-    open var specular: Color
-    open var shininess: Number
     open var gradientMap: Texture?
     open var map: Texture?
     open var lightMap: Texture?
@@ -131,7 +123,6 @@ open external class MeshToonMaterial(parameters: MeshToonMaterialParameters = de
     open var displacementMap: Texture?
     open var displacementScale: Number
     open var displacementBias: Number
-    open var specularMap: Texture?
     open var alphaMap: Texture?
     open var wireframe: Boolean
     open var wireframeLinewidth: Number

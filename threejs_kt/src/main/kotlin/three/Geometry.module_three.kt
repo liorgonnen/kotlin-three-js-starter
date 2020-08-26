@@ -1,4 +1,5 @@
-@file:JsQualifier("THREE")
+@file:JsModule("three")
+@file:JsNonModule
 @file:Suppress("ABSTRACT_MEMBER_NOT_IMPLEMENTED", "VAR_TYPE_MISMATCH_ON_OVERRIDE", "INTERFACE_WITH_SUPERCLASS", "OVERRIDING_FINAL_MEMBER", "RETURN_TYPE_MISMATCH_ON_OVERRIDE", "CONFLICTING_OVERLOADS", "EXTERNAL_DELEGATION", "PackageDirectoryMismatch")
 package three.js
 
@@ -68,7 +69,7 @@ open external class Geometry : EventDispatcher {
     open fun computeBoundingBox()
     open fun computeBoundingSphere()
     open fun merge(geometry: Geometry, matrix: Matrix = definedExternally, materialIndexOffset: Number = definedExternally)
-    open fun mergeMesh(mesh: Mesh)
+    open fun mergeMesh(mesh: Mesh<dynamic, dynamic>)
     open fun mergeVertices(): Number
     open fun setFromPoints(points: Array<Vector2>): Geometry /* this */
     open fun setFromPoints(points: Array<Vector3>): Geometry /* this */

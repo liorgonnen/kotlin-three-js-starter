@@ -1,4 +1,5 @@
-@file:JsQualifier("THREE")
+@file:JsModule("three")
+@file:JsNonModule
 @file:Suppress("ABSTRACT_MEMBER_NOT_IMPLEMENTED", "VAR_TYPE_MISMATCH_ON_OVERRIDE", "INTERFACE_WITH_SUPERCLASS", "OVERRIDING_FINAL_MEMBER", "RETURN_TYPE_MISMATCH_ON_OVERRIDE", "CONFLICTING_OVERLOADS", "EXTERNAL_DELEGATION", "PackageDirectoryMismatch")
 package three.js
 
@@ -23,17 +24,18 @@ external interface HSL {
     var l: Number
 }
 
-open external class Color(r: Number, g: Number, b: Number) {
-    constructor(color: Color)
-    constructor(color: String)
-    constructor(color: Number)
+open external class Color {
+    constructor(color: Color = definedExternally)
+    constructor(color: String = definedExternally)
+    constructor(color: Number = definedExternally)
+    constructor(r: Number, g: Number, b: Number)
     open var isColor: Boolean
     open var r: Number
     open var g: Number
     open var b: Number
     open fun set(color: Color): Color
-    open fun set(color: Number): Color
     open fun set(color: String): Color
+    open fun set(color: Number): Color
     open fun setScalar(scalar: Number): Color
     open fun setHex(hex: Number): Color
     open fun setRGB(r: Number, g: Number, b: Number): Color
@@ -68,4 +70,5 @@ open external class Color(r: Number, g: Number, b: Number) {
     open fun fromArray(array: ArrayLike<Number>, offset: Number = definedExternally): Color /* this */
     open fun toArray(array: Array<Number> = definedExternally, offset: Number = definedExternally): Array<Number>
     open fun toArray(xyz: ArrayLike<Number>, offset: Number = definedExternally): ArrayLike<Number>
+    open fun fromBufferAttribute(attribute: BufferAttribute, index: Number): Color /* this */
 }

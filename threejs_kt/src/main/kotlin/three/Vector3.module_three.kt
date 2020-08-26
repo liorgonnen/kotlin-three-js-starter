@@ -1,4 +1,5 @@
-@file:JsQualifier("THREE")
+@file:JsModule("three")
+@file:JsNonModule
 @file:Suppress("ABSTRACT_MEMBER_NOT_IMPLEMENTED", "VAR_TYPE_MISMATCH_ON_OVERRIDE", "INTERFACE_WITH_SUPERCLASS", "OVERRIDING_FINAL_MEMBER", "RETURN_TYPE_MISMATCH_ON_OVERRIDE", "CONFLICTING_OVERLOADS", "EXTERNAL_DELEGATION", "PackageDirectoryMismatch")
 package three.js
 
@@ -32,8 +33,8 @@ open external class Vector3(x: Number = definedExternally, y: Number = definedEx
     override fun clone(): Vector3 /* this */
     open fun copy(v: Vector3): Vector3 /* this */
     override fun copy(v: Vector): Vector /* this */
-    open fun add(v: Vector3, w: Vector3 = definedExternally): Vector3 /* this */
-    override fun add(v: Vector, w: Vector): Vector /* this */
+    open fun add(v: Vector3): Vector3 /* this */
+    override fun add(v: Vector): Vector /* this */
     override fun addScalar(s: Number): Vector3 /* this */
     open fun addScaledVector(v: Vector3, s: Number): Vector3 /* this */
     override fun addScaledVector(vector: Vector, scale: Number): Vector /* this */
@@ -80,7 +81,7 @@ open external class Vector3(x: Number = definedExternally, y: Number = definedEx
     open fun lerp(v: Vector3, alpha: Number): Vector3 /* this */
     override fun lerp(v: Vector, alpha: Number): Vector /* this */
     open fun lerpVectors(v1: Vector3, v2: Vector3, alpha: Number): Vector3 /* this */
-    open fun cross(a: Vector3, w: Vector3 = definedExternally): Vector3 /* this */
+    open fun cross(a: Vector3): Vector3 /* this */
     open fun crossVectors(a: Vector3, b: Vector3): Vector3 /* this */
     open fun projectOnVector(v: Vector3): Vector3 /* this */
     open fun projectOnPlane(planeNormal: Vector3): Vector3 /* this */
@@ -103,6 +104,6 @@ open external class Vector3(x: Number = definedExternally, y: Number = definedEx
     open fun fromArray(array: ArrayLike<Number>, offset: Number = definedExternally): Vector3 /* this */
     open fun toArray(array: Array<Number> = definedExternally, offset: Number = definedExternally): Array<Number>
     open fun toArray(array: ArrayLike<Number>, offset: Number = definedExternally): ArrayLike<Number>
-    open fun fromBufferAttribute(attribute: BufferAttribute, index: Number, offset: Number = definedExternally): Vector3 /* this */
+    open fun fromBufferAttribute(attribute: BufferAttribute, index: Number): Vector3 /* this */
     open fun random(): Vector3 /* this */
 }

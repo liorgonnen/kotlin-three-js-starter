@@ -1,4 +1,5 @@
-@file:JsQualifier("THREE")
+@file:JsModule("three")
+@file:JsNonModule
 @file:Suppress("ABSTRACT_MEMBER_NOT_IMPLEMENTED", "VAR_TYPE_MISMATCH_ON_OVERRIDE", "INTERFACE_WITH_SUPERCLASS", "OVERRIDING_FINAL_MEMBER", "RETURN_TYPE_MISMATCH_ON_OVERRIDE", "CONFLICTING_OVERLOADS", "EXTERNAL_DELEGATION", "PackageDirectoryMismatch")
 package three.js
 
@@ -19,7 +20,7 @@ import org.w3c.xhr.*
 
 external interface Renderer {
     var domElement: HTMLCanvasElement
-    fun render(scene: Scene, camera: Camera)
+    fun render(scene: Object3D, camera: Camera)
     fun setSize(width: Number, height: Number, updateStyle: Boolean = definedExternally)
 }
 
@@ -79,7 +80,6 @@ open external class WebGLRenderer(parameters: WebGLRendererParameters = definedE
     open var physicallyCorrectLights: Boolean
     open var toneMapping: ToneMapping
     open var toneMappingExposure: Number
-    open var toneMappingWhitePoint: Number
     open var shadowMapDebug: Boolean
     open var maxMorphTargets: Number
     open var maxMorphNormals: Number
@@ -131,8 +131,8 @@ open external class WebGLRenderer(parameters: WebGLRendererParameters = definedE
     open fun renderBufferDirect(camera: Camera, scene: Scene, geometry: BufferGeometry, material: Material, obj: Object3D, geometryGroup: Any)
     open fun setAnimationLoop(callback: Function<*>?)
     open fun animate(callback: Function<*>)
-    open fun compile(scene: Scene, camera: Camera)
-    override fun render(scene: Scene, camera: Camera)
+    open fun compile(scene: Object3D, camera: Camera)
+    override fun render(scene: Object3D, camera: Camera)
     open fun getActiveCubeFace(): Number
     open fun getActiveMipmapLevel(): Number
     open fun setFramebuffer(value: WebGLFramebuffer)

@@ -1,4 +1,5 @@
-@file:JsQualifier("THREE")
+@file:JsModule("three")
+@file:JsNonModule
 @file:Suppress("ABSTRACT_MEMBER_NOT_IMPLEMENTED", "VAR_TYPE_MISMATCH_ON_OVERRIDE", "INTERFACE_WITH_SUPERCLASS", "OVERRIDING_FINAL_MEMBER", "RETURN_TYPE_MISMATCH_ON_OVERRIDE", "CONFLICTING_OVERLOADS", "EXTERNAL_DELEGATION", "PackageDirectoryMismatch")
 package three.js
 
@@ -18,8 +19,8 @@ import org.w3c.workers.*
 import org.w3c.xhr.*
 
 open external class Box3(min: Vector3 = definedExternally, max: Vector3 = definedExternally) {
-    open var max: Vector3
     open var min: Vector3
+    open var max: Vector3
     open var isBox3: Boolean
     open fun set(min: Vector3, max: Vector3): Box3 /* this */
     open fun setFromArray(array: ArrayLike<Number>): Box3 /* this */
@@ -39,7 +40,7 @@ open external class Box3(min: Vector3 = definedExternally, max: Vector3 = define
     open fun expandByObject(obj: Object3D): Box3 /* this */
     open fun containsPoint(point: Vector3): Boolean
     open fun containsBox(box: Box3): Boolean
-    open fun getParameter(point: Vector3): Vector3
+    open fun getParameter(point: Vector3, target: Vector3): Vector3
     open fun intersectsBox(box: Box3): Boolean
     open fun intersectsSphere(sphere: Sphere): Boolean
     open fun intersectsPlane(plane: Plane): Boolean
