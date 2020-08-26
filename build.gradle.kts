@@ -1,5 +1,5 @@
 plugins {
-    id("org.jetbrains.kotlin.js") version "1.4-M2"
+    id("org.jetbrains.kotlin.js") version "1.4.0"
 }
 
 group = "com.liorgonnen"
@@ -11,7 +11,6 @@ repositories {
 }
 
 dependencies {
-    implementation(kotlin("stdlib-js"))
     api(project(":threejs_kt"))
     api(project(":statsjs_kt"))
 }

@@ -2,8 +2,8 @@ import ext.aspectRatio
 import ext.minus
 import stats.js.Stats
 import three.js.*
-import kotlin.browser.document
-import kotlin.browser.window
+import kotlinx.browser.document
+import kotlinx.browser.window
 
 class Cube {
     private val clock = Clock()
